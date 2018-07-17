@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import Title from './Components/Title';
 import Form from './Components/Form';
 import Movie from './Components/Movie';
-import { MY_KEY } from './config.js'
+import 'dotenv/config';
 import './App.css';
+
+
+const MY_KEY = process.env.MY_KEY;
 
 class App extends Component {
   state = {
