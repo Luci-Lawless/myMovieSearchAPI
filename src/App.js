@@ -5,7 +5,7 @@ import Movie from './Components/Movie';
 // import { MY_KEY } from './config';
 import './App.css';
 
-const API_KEY = process.env.MY_KEY;
+const API_KEY = process.env.REACT_APP_MY_KEY;
 
 class App extends Component {
   state = {
