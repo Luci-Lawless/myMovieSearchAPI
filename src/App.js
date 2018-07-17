@@ -5,7 +5,7 @@ import Movie from './Components/Movie';
 // import { MY_KEY } from './config';
 import './App.css';
 
-const MY_KEY = process.env.MY_KEY;
+const API_KEY = process.env.MY_KEY;
 
 class App extends Component {
   state = {
@@ -23,7 +23,7 @@ class App extends Component {
   getMovie = async (e) => {
     e.preventDefault();
     const title = e.target.elements.title.value;
-    const api_call = await fetch(`https://www.omdbapi.com/?apikey=${process.env.MY_KEY}&t=${title}`);
+    const api_call = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&t=${title}`);
     const data = await api_call.json();
     if (title !== undefined) {
       console.log(data);
