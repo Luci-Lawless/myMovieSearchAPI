@@ -1,12 +1,12 @@
 import React from 'react';
 
 class Movie extends React.Component {
-  
+
   render() {
     return (
       <div className="search-result">
         <div className="align-img">
-          {this.props.poster && <img src={this.props.poster} alt={`${this.props.title}'s Poster`}/>}
+          {this.props.poster && <img src={this.props.poster} alt={""}/>}
         </div>
         {this.props.title && <h2>{this.props.title} ({this.props.year})</h2>}
         {this.props.genre && <p>Genre: {this.props.genre}</p>}

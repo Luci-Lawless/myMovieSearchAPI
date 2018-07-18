@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import Title from './Components/Title';
 import Form from './Components/Form';
 import Movie from './Components/Movie';
-// import { MY_KEY } from './config';
 import './App.css';
 
-const API_KEY = process.env.REACT_APP_MY_KEY;
+const API_KEY =  process.env.REACT_APP_MY_KEY;
 
 class App extends Component {
   state = {
@@ -26,7 +25,6 @@ class App extends Component {
     const api_call = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&t=${title}`);
     const data = await api_call.json();
     if (title !== undefined) {
-      console.log(data);
       this.setState({
         title: data.Title,
         year: data.Year,
